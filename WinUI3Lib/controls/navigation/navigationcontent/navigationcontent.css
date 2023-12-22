@@ -1,0 +1,11 @@
+.navigationcontent{
+    width: calc(100% - 320px);
+    border-radius: 8px 0px 8px 0px;
+    background: rgba(243,243,243,.63);
+    border: 1px solid rgb(213,216,220);
+    position: relative;
+    /* left: -1px; */
+    /* z-index: -1; */
+    /* top: -1px; */
+    box-shadow: -1px -1px 0px 2px rgb(243,243,243,.1);
+}

@@ -1,0 +1,9 @@
+.smalltaskbar>.iconbutton {
+    width: 24px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}

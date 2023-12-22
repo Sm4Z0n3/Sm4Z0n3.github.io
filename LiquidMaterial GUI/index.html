@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/bg.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div id="load" style="opacity: 1;transition: opacity 1s;">
+        <h1 align="center" style="margin-top: 50%;">LiquidMaterial Loading</h1>
+    </div>
+    <div id="main" style="display: none;position: relative;  opacity: 0;transition: opacity 1s;">
+        <br><br><br><br><br><br><br><br>
+        <h1 class="title">LiquidMaterial <br> for Minecraft.</h1>
+        <br>
+        <div class="menu">
+            <div>
+                <a href="sp.html">
+                    <button class="infobutton" onmouseover="expandText(this)" onmouseout="collapseText(this)">Singleplayer<br><br>
+                        <span id="sp">LiquidMaterial will surprise you with its advanced Features it singleplayer letting you finaly play the game how you want tol</span>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="mp.html">
+                    <button class="infobutton" onmouseover="expandText(this)" onmouseout="collapseText(this)">Muitiplayer<br><br>
+                        <span id="mp">With the power of LiquidMaterial,you can finalty beat the competition  Quartet in Mutiplayer and finally Good Luck!</span>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="am.html">
+                    <button class="infobutton" onmouseover="expandText(this)" onmouseout="collapseText(this)">AltManager<br><br>
+                        <span id="am">LiquidMaterial alt manager lets you easily switch beteen your minecraft accounts so you can spend more time playing instead of legging in</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <input class="play" type="button" onclick="Anm()" value="Play >">
+    </div>
+</body>
+</html>
+<script>
+    window.onload = function() {
+    setTimeout(function() {
+        document.getElementById("load").style.opacity = "0";
+        setTimeout(function() {
+        document.getElementById("load").style.display = "none";
+        document.getElementById("main").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("main").style.opacity = "1";
+        }, 100);
+        }, 1000);
+    }, 3000);
+    };
+</script>

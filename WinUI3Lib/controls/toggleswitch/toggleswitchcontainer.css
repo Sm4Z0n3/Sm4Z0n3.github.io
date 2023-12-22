@@ -1,0 +1,10 @@
+.toggleswitch {
+    display: flex;
+    width: auto;
+    height: 20px;
+    
+}
+
+.toggleswitch>p.label{
+    margin-left: 2em;
+}

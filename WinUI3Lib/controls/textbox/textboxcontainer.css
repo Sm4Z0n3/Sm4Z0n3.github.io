@@ -1,0 +1,10 @@
+.textbox {
+    width: min-content;
+    border-radius: 3px;
+    border-top: 1px rgb(229,229,229) solid;
+    border-right: 1px rgb(229,229,229) solid;
+    border-left: 1px rgb(229,229,229) solid;
+    border-bottom: 1px rgb(134,134,134) solid;
+    background-color: white;
+    display: inline;
+}

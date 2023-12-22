@@ -1,0 +1,128 @@
+*{
+  font-size: 16px;
+  color: white;
+  transition: all 0.3s;
+  overflow: auto;
+}
+
+br{
+  -webkit-user-select: none;
+}
+
+WinUI-Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px 4px 16px;
+  width: calc(auto + 35px);
+  height: calc(auto + 35px);
+  border: 0.4px solid rgb(65, 65, 65);
+  background-color: rgba(68, 68, 68, 0.726);
+  border-radius: 5px;
+  -webkit-user-select: none;
+}
+
+WinUI-Button:hover {
+  background-color: rgba(88, 88, 88, 0.726);
+}
+
+WinUI-Grid{
+  padding: 20px;
+  border: 0.3px 0.3px 0.3px 0.1px solid rgb(180, 180, 180);
+  background-color: rgba(71, 71, 71, 0.726);
+  border-radius: 5px;
+}
+
+WinUI-TextBox{
+  width: calc(auto + 35px);
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  min-width: 80px;
+  min-height: 30px;
+  border: 0.6px 0.3px 0.6px 0.1px solid rgb(158, 158, 158);
+  background-color: rgba(71, 71, 71, 0.726);
+  border-radius: 5px;
+  outline: none;
+  flex-flow:row wrap;
+}
+WinUI-TextBox:hover{
+  background-color: rgba(88, 88, 88, 0.726);
+}
+WinUI-TextBox:focus{
+  background-color: rgba(88, 88, 88, 0.726);
+  border-bottom:1.4px solid #5389ffd5;
+}
+WinUI-TextBox textarea{
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+}
+
+WinUI-CheckButton{
+  padding: 8px;
+  min-width: 35px;
+  min-height: 35px;
+  border: 0.3px 0.3px 0.3px 0.1px solid rgb(180, 180, 180);
+  background-color: rgba(71, 71, 71, 0.726);
+  border-radius: 5px;
+  -webkit-user-select: none;
+  display: flex;
+  align-items: center;
+  flex-flow:row wrap;
+}
+WinUI-CheckButton[checked]::before {
+  content: "✔Checked";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: green;
+}
+WinUI-CheckButton::before {
+  content: "×Haven't checked";
+  color: red;
+}
+
+WinUI-H1{
+  font-size: large;
+  -webkit-user-select: none;
+}
+
+WinUI-Notify {
+  width: 400px;
+  height: 160px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999; /* 设置 z-index 来确保位于最高层 */
+  /* 其他样式可以根据需要进行调整 */
+  background-color: rgba(82, 82, 82, 0.801);
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  overflow-wrap: break-word;
+  word-wrap: break-word; /* 兼容性较好的写法 */
+}
+
+.messagebox{
+  overflow-y: auto;
+  max-height: 530px;
+}
+.messagebox *{
+  background-color: rgba(71, 71, 71, 0.726);
+  padding: 5px;
+  border-radius: 6px;
+}
+.messagebox *:hover{
+  background-color: rgba(88, 88, 88, 0.726);
+}
+
+.codeeditor{
+  background-color: rgba(88, 88, 88, 0.726);
+  border-radius: 7px;
+  max-height: 193px; 
+  max-width: 870px;
+  height: 193px;
+  width: 870px;
+  overflow: auto;
+}

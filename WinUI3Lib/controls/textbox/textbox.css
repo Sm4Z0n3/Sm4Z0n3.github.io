@@ -1,0 +1,13 @@
+._textbox{
+	border: none;
+	box-shadow:none;
+	outline: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    font-family: 'Segoe UI';
+    min-width: 80px;
+    min-height: 25px;
+    overflow: scroll;
+    text-decoration: 1px solid white;
+}

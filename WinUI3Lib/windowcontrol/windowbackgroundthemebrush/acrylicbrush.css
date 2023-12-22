@@ -1,0 +1,5 @@
+.window[backdrop="acrylic"] {
+    backdrop-filter: blur(24px) brightness(120%) saturate(78%);
+    background-image: url("../../../img/Mask.png");
+    /* overflow: hidden; */
+}

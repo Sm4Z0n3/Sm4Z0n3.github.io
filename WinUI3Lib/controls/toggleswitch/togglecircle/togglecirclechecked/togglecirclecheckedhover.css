@@ -1,0 +1,3 @@
+._toggleswitch:checked:hover + .togglecircle{
+    background-color: rgb(25,110,191);
+}

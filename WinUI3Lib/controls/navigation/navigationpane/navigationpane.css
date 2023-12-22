@@ -1,0 +1,12 @@
+.navigationpane{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    background-color: /*rgb(243,243,243)*/ /*rgb(32,32,32)*/ rgba(243,243,243,.63);
+    align-items: flex-start;
+    border-radius: 0px 0px 0px 8px;
+    transition: 0.2s cubic-bezier(0,0,0,1) all;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 3px;
+}

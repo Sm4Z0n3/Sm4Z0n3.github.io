@@ -1,0 +1,3 @@
+.textbox:has(._textbox:focus)  {
+    border-bottom: 2px rgb(0,95,184) solid;
+}

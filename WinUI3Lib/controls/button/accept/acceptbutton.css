@@ -1,0 +1,6 @@
+.button[controltype='accept']{
+    background: #005FB8;
+    color: white;
+    border: 1px solid rgb(20,108,190);
+    border-bottom: 1px solid rgb(4,63,117);
+}

@@ -1,0 +1,38 @@
+
+@keyframes taskbuttonhover {
+    from {
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    to {
+        box-shadow: 0px 0px 5px 0px #000;
+    }
+}
+
+@keyframes selectoropen {
+    from {
+        height: 0px;
+    }
+
+    50% {
+        height: 12px;
+    }
+
+    to {
+        height: 16px;
+    }
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+}
+

@@ -1,0 +1,42 @@
+.slideshow-container {
+    position: relative;
+    max-width: 75%;
+    margin: 0 auto;
+}
+.slideback{
+    position: relative;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #69696952;
+    transition: all 0.5s ease-in-out;
+}
+.slideback:hover{
+    box-shadow: #a3a3a3 5px 5px 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide {
+    display: none;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}

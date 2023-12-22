@@ -1,0 +1,8 @@
+.apptaskbar>.appbutton {
+    background-color: transparent;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+}

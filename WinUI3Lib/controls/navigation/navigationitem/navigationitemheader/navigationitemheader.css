@@ -1,0 +1,6 @@
+.navigationitemheader{
+    display: inline-flex;
+    /* width: fit-content; */
+    font-weight: 530;
+    align-items: center;
+}

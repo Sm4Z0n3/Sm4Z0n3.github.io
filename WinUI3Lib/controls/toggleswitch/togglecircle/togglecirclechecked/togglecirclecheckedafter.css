@@ -1,0 +1,7 @@
+._toggleswitch:checked + .togglecircle:after {
+    margin-top: 1px;
+    background-color: rgb(255,255,255);
+    left : 19px;
+    border-color: rgb(0,85,165);
+    border: 1px;
+}

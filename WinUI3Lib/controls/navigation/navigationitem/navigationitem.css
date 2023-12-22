@@ -1,0 +1,10 @@
+.navigationitem{
+    border-radius: 4px;
+    padding: 3px;
+    display: flex;
+    width: 310px;
+    height: 34px;
+    align-items: center;
+    /* left: 1.25px; */
+    position: relative;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/dark.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(43, 43, 43);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px;
+            flex-flow:row wrap;
+        }
+    </style>
+<WinUI-Grid style="width: 70%;height: auto;margin-top: 30px;">
+    <WinUI-Button style="width: 140px;">Chinese | 简体中文</WinUI-Button><br>
+    <div>
+        <WinUI-H1 style="margin: auto;">Type some text. (All Language)</WinUI-H1><br>
+        <WinUI-TextBox contenteditable="true" id="text" style="margin: auto;">No!</WinUI-TextBox><br>
+        <WinUI-Button onclick="post()" style="width: 170px;margin: auto;">Judge emotion</WinUI-Button>
+    </div>
+    <WinUI-H1 style="margin: auto;">JS Soure Code</WinUI-H1><br>
+    <WinUI-TextBox style="height: auto;width: auto;">
+        &nbsp;const url = &#x27;https://www.hanlp.com/backend/redirect/v2/sentiment_analysis&#x27;;<br>
+        &nbsp;const data = {<br>
+            &nbsp;&nbsp;text: "NO!",<br>
+            &nbsp;&nbsp;zh: true<br>
+        &nbsp;};<br>
+        <br>
+        &nbsp;fetch(url, {<br>
+            &nbsp;&nbsp;method: &#x27;POST&#x27;,<br>
+            &nbsp;&nbsp; headers: {<br>
+                &nbsp;&nbsp;&nbsp;&#x27;Content-Type&#x27;: &#x27;application/json&#x27;<br>
+                &nbsp;&nbsp;},<br>
+            &nbsp;body: JSON.stringify(data)<br>
+        &nbsp;})<br>
+        &nbsp;.then(response =&gt; response.json())<br>
+        &nbsp;.then(data =&gt; <br>
+        &nbsp;&nbsp;{<br>
+            &nbsp;&nbsp;&nbsp;var result = &quot;&quot;;<br>
+            &nbsp;&nbsp;&nbsp;if(data &lt; 0)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;    result = &quot;负面&quot;;<br>
+            &nbsp;&nbsp;&nbsp;if(data &lt; -0.5)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;     result = &quot;极度负面&quot;;<br>
+            &nbsp;&nbsp;&nbsp;  if(data &gt; 0)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;      result = &quot;正面&quot;;<br>
+            &nbsp;&nbsp;&nbsp;  if(data &gt; 0.5)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;      result = &quot;极度正面&quot;;<br>
+            &nbsp;&nbsp;&nbsp;    console.log(result + data)<br>
+            &nbsp;&nbsp; }<br>
+            &nbsp;&nbsp;  )<br>
+         &nbsp; .catch(error =&gt; console.error(&#x27;Error:&#x27;, error));<br>
+    </WinUI-TextBox>
+</WinUI-Grid>
+</body>
+</html>
+<script src="script.js"></script>

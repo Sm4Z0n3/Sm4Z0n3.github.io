@@ -1,0 +1,11 @@
+/*.navigationcontent::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: rgb(249,249,249);
+    position: relative;
+    display: block;
+    z-index: -1;
+    left: -1px;
+    top: -1px;
+}*/

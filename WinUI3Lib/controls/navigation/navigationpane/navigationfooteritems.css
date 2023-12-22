@@ -1,0 +1,13 @@
+.navigationfooteritems{
+    display: flex;
+    /* flex-direction: column; */
+    height: auto;
+    width: 100%;
+    border-top: 1px rgba(0,0,0,.803);
+    align-items: center;
+    gap: 3px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+}

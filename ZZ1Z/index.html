@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周至县第一中学</title>
+    <link rel="stylesheet" media="all" href="./style/menu.css" />
+    <link rel="stylesheet" media="all" href="./style/main.css" />
+    <link rel="stylesheet" media="all" href="./style/lbimg.css" />
+    <link rel="stylesheet" media="all" href="./style/news.css" />
+    <script src="./script/main.js"></script>
+</head>
+<ul class="menu">
+    <li onclick="reload()">刷新</li>
+    <li>新闻</li>
+    <li>学校特色</li>
+    <li>联系学校</li>
+    <li>党支部</li>
+</ul>
+<body style="background-color: antiquewhite;position: relative;">
+    <header style="font-family: 'maoti', 楷体;padding: 10px;">
+        <a href="/index.html">
+            <h3>
+                致精至诚
+                <img src="./images/zz1z.png" style="width: 100px;height: 100px;" alt="1">
+                唯是唯心
+            </h3>
+            <h1>周 至 县 第 一 中 学</h1>
+        </a>
+    </header>
+    <div class="sidebar">
+        <a href="/index.html"><img alt="zz1z" src="/images/zz1z.png" style="font-family: 楷体;overflow: auto;width:100px;height:100px;position:absolute;left:50%;transform:translate(-50%);margin-top: 10px;"></img></a>
+        <a href="#" class="nav-item" style="margin-top: 120px;">学校主页</a>
+        <a href="#" class="nav-item">新闻</a>
+        <a href="#" class="nav-item">学校特色</a>
+        <a href="#" class="nav-item">国家政策</a>
+        <a href="#" class="nav-item">党支部</a>
+        <a href="#" class="nav-item">社团</a>
+    </div>
+    <div class="main" style="font-family: 楷体;overflow: auto;">
+        <a href="#">
+            <div class="page_ page_1 page-visible" id="page_1">
+                <div class="slideback">
+                    <div class="slideshow-container">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="http://www.xatyz.com/d/file/2021-05-07/8b5ab0b2ca4ae928a41c04b93cb726c0.jpg" alt="青春心向党 奋斗新征程">
+                                <p>青春心向党 奋斗新征程</p>
+                            </div>
+                            <div class="slide fade">
+                                <img src="http://www.xatyz.com/d/file/2021-09-13/07f73ecc49e2a3ffbaa336b5a16e5b76.jpg" alt="心所至 梦必达">
+                                <p>心所至 梦必达</p>
+                            </div>
+                            <div class="slide fade">
+                                <img src="http://www.xatyz.com/d/file/2023-10-02/9859e60c1ec4e235b3dd7be9800d6623.jpg" alt="国庆节">
+                                <p>中华人民共和国74周年华诞</p>
+                            </div>
+                        </div>
+                        <div class="dot-container">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="js_" style="font-size: 24px;"></div>
+        </a>
+            <script src="./script/lbimg.js"></script>
+        </div>
+        <div class="page_ page_2 page-hidden" id="page_2">
+            <script>
+            fetch('./page/news/get.php')
+            .then(function(response) {
+                if (response.ok) {
+                return response.json();
+                } else {
+                throw new Error(response.Error);
+                }
+            })
+            .then(function(response) {
+                for (var key in response) {
+                if (response.hasOwnProperty(key)) {
+                    var value = response[key];
+                    var newsDiv = document.getElementById('news');
+                    var p = document.createElement('p');
+                    p.innerHTML = '<a href="./page?p='+key+'"><div class="news"><p><li>' + key + '</li></p></div></a>';//' + value + '
+                    newsDiv.appendChild(p);
+                }
+                }
+            })
+            .catch(function(error) {
+                console.error(error);
+            });
+
+            </script>
+            <div id="news"></div>
+        </div>
+        <div class="page_ page_3 page-hidden" id="page_3">特色内容</div>
+        <style>
+            .page_4 a{
+                color: rgb(56, 56, 56);
+            }
+        </style>
+        <div class="page_ page_4 page-hidden" id="page_4">
+
+            <script>
+                // 创建一个 XMLHttpRequest 对象
+                var xhr = new XMLHttpRequest();
+                
+                // 设置请求方法和 URL
+                xhr.open("GET", "./inde.html", true);
+                
+                // 设置请求完成后的处理函数
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        // 请求成功，获取 PHP 页面返回的内容
+                        var responseText = xhr.responseText;
+                        
+                        // 找到要追加内容的目标元素（这里是 "page_4"）
+                        var targetElement = document.getElementById("page_4");
+                        
+                        // 将新内容追加到目标元素中
+                        targetElement.innerHTML = responseText;
+                    }
+                };
+                
+                // 发送请求
+                xhr.send();
+            </script>
+        </div>
+        <div class="page_ page_5 page-hidden" id="page_5">党的事务内容</div>
+        <div class="page_ page_6 page-hidden" id="page_6">
+            <script>
+                var page6Div = document.getElementById("page_6");
+                var contentUrl = './page/shetuan.html';
+                fetch(contentUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(content => {
+                        page6Div.innerHTML = content;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            </script>
+        </div>
+    </div>
+    
+    <div class="collapse-button">展开\收起</div>
+</body>
+</html>
+<script src="./script/menu.js"></script>

@@ -1,0 +1,15 @@
+.LiquidbounceText {
+    position: fixed;
+    margin:10px;
+    width: auto;
+    height: auto;
+    text-shadow: 4px 4px;
+  }
+  
+  .ArrowList {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+  }

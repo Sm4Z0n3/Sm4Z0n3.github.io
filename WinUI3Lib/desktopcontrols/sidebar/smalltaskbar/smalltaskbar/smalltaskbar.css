@@ -1,0 +1,5 @@
+.smalltaskbar {
+    width: 50%;
+    height: 43px;
+    display: flex;
+}

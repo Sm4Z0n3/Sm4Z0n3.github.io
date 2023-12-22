@@ -1,0 +1,4 @@
+.navtitlebtn:hover{
+    background-color: rgba(0,0,0,0.06);
+    transition: 0.1s all;
+}

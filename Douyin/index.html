@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 添加一些样式，美化窗口 */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #video-container {
+            /* 使用 margin: auto; 居中对齐 */
+            margin: auto;
+            width: 640px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+        #video-player {
+            display: block;
+            margin: 0 auto;
+        }
+        #button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0078d4;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video-player" width="560" height="840" controls></video>
+    </div>
+    <div id="button-container">
+        <button id="prev-button">播放上一个</button>
+        <button id="next-button">播放下一个</button>
+        <button onclick="submitVideoUrl()">喜欢视频</button>
+        <br>
+    </div>
+    <div id="checkbox-container">
+        <!-- 添加 checked 属性，使选择框默认选中 -->
+        <input type="checkbox" id="auto-switch-checkbox" checked>
+        <label for="auto-switch-checkbox">自动切换下一个视频</label>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        // 调用函数，播放第一个视频
+        playVideo();
+        // 为播放上一个按钮添加点击事件监听器，调用函数，切换到上一个视频
+        prevButton.addEventListener("click", playPrev);
+        // 为播放下一个按钮添加点击事件监听器，调用函数，切换到下一个视频
+        nextButton.addEventListener("click", playNext);
+        // 为视频播放器添加 ended 事件监听器，当视频播放结束时，调用函数，检查选择框的状态，并根据状态决定是否自动切换下一个视频
+        videoPlayer.addEventListener("ended", checkAutoSwitch);
+
+    </script>
+</body>
+</html>

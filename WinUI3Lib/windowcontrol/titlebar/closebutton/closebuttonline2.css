@@ -1,0 +1,15 @@
+.titlebar>.closebutton:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 1px;
+    height: 18px;
+    background: #000;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    margin-right: 10px;
+}

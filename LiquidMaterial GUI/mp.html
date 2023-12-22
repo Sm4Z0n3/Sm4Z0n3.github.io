@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="/js/bg.js"></script>
+    <script src="/js/mp.js"></script>
+    <title>Multiplayer</title>
+</head>
+<body>
+    <h2 align="center" style="margin-top: 40px;">Play Multiplayer</h2>
+    <div id="slist" class="grid_cav" style="overflow-y: auto;"></div>
+        <div>
+            <div class="menu_btn" style="width: 100%;display: flex;">
+                <button type="button">Join Server</button>
+                <button type="button">Direct Connect</button>
+                <button onclick="addserver()" type="button">Add server</button>
+            </div>
+            <div class="menu_btn" style="width: 100%;display: flex;">
+                <button type="button">Delete</button>
+                <button type="button">Refresh</button>
+                <a href="index.html"><button type="button">Cancel</button></a>
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        window.location.href = "index.html";
+    }
+    });
+    </script>

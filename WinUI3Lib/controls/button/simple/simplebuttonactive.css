@@ -1,0 +1,5 @@
+.button[controltype='simple']:active, .button:active, .dropdownbox:active, .expander[clickpander]:active{
+    background: rgba(249,249,249,.7);
+    border: 1px solid rgba(255, 255, 255, .0578);
+    color: rgb(0,0,0,.6063);
+}

@@ -1,0 +1,5 @@
+.taskbar[backdrop="mica"]{
+    backdrop-filter: blur(40px) brightness(1.1) saturate(1.2);
+    background: rgba(255,255,255,0.8);
+    background-image: url(../../../img/Mask.png);
+}

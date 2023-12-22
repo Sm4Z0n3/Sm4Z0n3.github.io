@@ -1,0 +1,5 @@
+.window[backdrop="mica"]{
+    backdrop-filter: blur(300px) brightness(1) saturate(1.5);
+    background: rgba(255,255,255,.75);
+    background-image: url(..\..\..\img\MessyGlassMask.png);
+}

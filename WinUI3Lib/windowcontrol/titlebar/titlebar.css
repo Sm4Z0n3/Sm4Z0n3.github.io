@@ -1,0 +1,13 @@
+.titlebar {
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 100%; */
+    /* margin: 10px; */
+    font-family: 'Segoe UI';
+    background-color: rgba(243,243,243,.63);
+    font-weight: 500;
+    border-radius: 8px 8px 0px 0px;
+    padding: 10px 10px 0px 10px;
+}

@@ -1,0 +1,5 @@
+@import url("../../../global.css");
+
+.apptaskbar>.appbutton:hover {
+    animation: taskbuttonhover ease-in 0.1s forwards;
+}

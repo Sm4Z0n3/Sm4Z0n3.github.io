@@ -1,0 +1,4 @@
+.stackpanel {
+    display: flex;
+    flex-direction: column;
+}

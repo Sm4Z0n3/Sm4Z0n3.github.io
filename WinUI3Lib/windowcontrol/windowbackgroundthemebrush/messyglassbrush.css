@@ -1,0 +1,5 @@
+.window[backdrop="messyglass"]{
+    backdrop-filter: blur(1em) brightness(102.3%) saturate(130%);
+    background-color: transparent;
+    background-image: url(../../../img/MessyGlassMask.png);
+}

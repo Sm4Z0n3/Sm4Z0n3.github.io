@@ -1,0 +1,27 @@
+.navigationpane[folder]{
+    width: 48px;
+    overflow-x: hidden;
+    transition: 0.2s cubic-bezier(0,0,0,1) all;
+}
+
+.navigationpane[folder] + .navigationcontent{
+    width: calc(100% - 48px);
+    transition: 0.2s cubic-bezier(0,0,0,1) all;
+}
+
+.navigationpane[folder] .navigationitem{
+    /* width: 32px; */
+    transition: 0.2s cubic-bezier(0,0,0,1) all;
+}
+
+.navigationpane[folder] .navigationitemheadertitle{
+    display: none;
+}
+
+.navigationpane[folder] .navigationpaneitems{
+    width: 48px;
+}
+
+.navigationpane[folder] .navigationfooteritems{
+    width: 48px;
+}

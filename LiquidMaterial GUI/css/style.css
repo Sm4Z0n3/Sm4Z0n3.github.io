@@ -1,0 +1,137 @@
+*{
+    -webkit-user-select: none;
+    overflow: hidden;
+    color: #fff;
+}
+body {
+    opacity: 0;
+    transition: opacity 1s;
+    background-image: url('https://images4.alphacoders.com/131/1313652.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 1920px;
+    height: 1080px;
+    min-height: 920px;
+}
+
+.grid_cav{
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 110%;
+    height: 70%;
+    margin-top: 55px;
+}
+
+.serverinfo{
+    display: inline-block;
+    width: 50%;
+    height: 70px;
+    background-color: rgba(100, 100, 100, 0.685);
+    border-radius: 17px;
+    padding: 9px;
+    margin-top: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.serverinfo:hover{
+    border-radius: 22px;
+    background-color: rgba(138, 138, 138, 0.87);
+    box-shadow: #fff 20px 0 20px;
+}
+.serverinfo span{
+    color: rgb(153, 153, 153);
+}
+.serverimg{
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    border-radius: 28px;
+    margin-left: 410px;
+}
+
+.menu_btn{
+    align-items: center;
+    margin-top: 20px;
+}
+.menu_btn button{
+display: inline-block;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+color: #fff;
+background-color: rgba(32, 32, 32, 0.678);
+border-radius: 6px;
+font-size: 18px;
+margin-left: 280px;
+width: 280px;
+height: 50px;
+border: none;
+transition: all 0.3s ease-in-out;
+}
+.menu_btn button:hover{
+    background-color: rgba(70, 70, 70, 0.911);
+}
+
+.title{
+    font-size: 112px;
+    margin-left: 200px;
+}
+.play{
+    background-color: rgb(211, 135, 255);
+    border: none;
+    border-radius: 9px;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    margin-left: 200px;
+    transition: all 0.5s ease-in-out;
+}
+.play:hover{
+    background-color: rgb(254, 251, 255);
+}
+
+.infobutton {
+    display: inline-block;
+    padding: 24px 0 0 0;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #2020209f;
+    border: 1.1px;
+    border-radius: 9px;
+    width: 400px;
+    font-size: 18px;
+    }
+
+    .infobutton:hover {
+    background-color: #363636f8;
+    border: #525252;
+    }
+
+    .infobutton:active {
+    background-color: #616161b9;
+    transform: translateY(4px);
+    }
+
+    .menu span {
+        color: #a5a5a5b9;
+        overflow:hidden;
+        white-space:nowrap;
+        display:inline-block;
+        transition-property: height;
+        transition-duration: .5s;
+        height:0px;
+        white-space: normal;
+    }
+    
+    .menu{      
+        margin-left:-20000px;
+        transition: all 0.7s ease-in-out;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .menu div{
+          padding-right: 60px;
+      }

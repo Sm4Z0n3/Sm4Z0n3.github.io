@@ -1,0 +1,3 @@
+.button[controltype='simple']:hover, .button:hover, .dropdownbox:hover, .expander[clickpander]:hover{
+    background: rgba(249,249,249,.9);
+}

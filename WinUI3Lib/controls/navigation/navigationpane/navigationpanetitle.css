@@ -1,0 +1,10 @@
+.navigationpanetitle{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    margin-left: 10px;
+    width: auto;
+}

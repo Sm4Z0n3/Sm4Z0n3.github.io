@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" media="all" href="/style/main.css" />
+    <script src="/script/main.js"></script>
+</head>
+<style>
+  img{
+    width: auto;
+    height: auto;
+  }
+</style>
+<body style="position: relative;">
+    <div class="main" style="max-width:600px;position:absolute;left:50%;transform:translate(-70%);margin-top: 50px;" id="main">123</div>
+    <div class="sidebar">
+        <a href="/index.html">
+          <img src="/images/zz1z.png" style="width:100px;height:100px;position:absolute;left:50%;transform:translate(-50%);margin-top: 10px;" alt="">
+        </a>
+        <a href="/index.html" style="margin-top: 120px;" class="nav-item">学校主页</a>
+    </div>
+    <div class="collapse-button">展开\收起</div>
+</body>
+</html>
+<script>
+var queryString = location.search;
+var queryArray = queryString.split("&");
+queryArray[0] = queryArray[0].slice(1);
+var pElement = queryArray.find(function(element) {
+  return element.startsWith("p=");
+});
+var pValue = pElement.split("=")[1];
+var newUrl = "./page/news/" + pValue + ".html";
+fetch(newUrl)
+  .then(function(response) {
+    if (response.ok) {
+      return response.text();
+    }else{
+        return '<h1 align="center">NOT FOUND PAGE.404\n没有找到文章...</h1>';
+    }
+  })
+  .then(function(responseText) {
+    var mainDiv = document.getElementById("main");
+    mainDiv.innerHTML = responseText;
+  });
+
+</script>

@@ -1,0 +1,11 @@
+.expander{
+    border-radius: 4px;
+    border: 1px rgb(229,229,229) solid;
+    background-color: rgba(251,251,251,.9);
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin: 6px;
+}

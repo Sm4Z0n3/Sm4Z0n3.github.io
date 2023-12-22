@@ -1,0 +1,9 @@
+.navigationitemselector {
+    position: absolute;
+    width: 3px;
+    height: 16px;
+    left: 4px;
+    top: calc(50% - 16px/2);
+    background: #005FB8;
+    border-radius: 999px;
+}

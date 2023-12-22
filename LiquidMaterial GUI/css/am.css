@@ -1,0 +1,43 @@
+.grid_alt_list {
+    background-color: rgba(240, 248, 255, 0.637);
+    height: 70%;
+    width: 70%;
+    min-height: 800px;
+    display: inline-block;
+    float: left;
+}
+
+.alt_info {
+    background-color: rgba(240, 248, 255, 0.637);
+    height: 70%;
+    width: 30%;
+    display: inline-block;
+    float: left;
+}
+
+.alt{
+    margin-left: 420px;
+    display: inline-block;
+    width: 58%;
+    height: 70px;
+    background-color: rgba(153, 153, 153, 0.685);
+    border-radius: 17px;
+    padding: 9px;
+    margin-top: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.alt:hover{
+    border-radius: 22px;
+    background-color: rgba(138, 138, 138, 0.87);
+    box-shadow: #fff 0 0 6px;
+}
+.alt span{
+    color: rgb(153, 153, 153);
+}
+.althead{
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    border-radius: 28px;
+    margin-left: 410px;
+}

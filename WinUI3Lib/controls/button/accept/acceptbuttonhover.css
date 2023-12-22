@@ -1,0 +1,3 @@
+.button[controltype='accept']:hover{
+    background: rgba(0, 95, 184, 0.9);
+}

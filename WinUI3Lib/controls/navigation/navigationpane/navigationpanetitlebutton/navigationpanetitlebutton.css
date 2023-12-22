@@ -1,0 +1,9 @@
+.navtitlebtn{
+    font-family: 'Segoe MDL2 Assets';
+    font-size: 16px;
+    padding: 8px;
+    /* height: 100%; */
+    /* vertical-align: baseline; */
+    border-radius: 4px;
+    margin-right: 8px;
+}

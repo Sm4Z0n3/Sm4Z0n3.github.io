@@ -1,0 +1,13 @@
+.titlebar>.closebutton {
+    position: relative;
+    width: 1px;
+    height: 18px;
+    background-color: #000;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: inline-block;
+    margin-right: 10px;
+}

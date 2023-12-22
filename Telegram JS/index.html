@@ -1,0 +1,86 @@
+<!--http://127.0.0.1:5500/?t=6662950137:AAH2w1Fe58rEo3jtOYa_gPz4uZbf9mruYu0&smu=1901930153&smt=%E5%8F%91%E9%80%81%E7%9A%84%E5%86%85%E5%AE%B9-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <title>Telegram Bot Control</title>
+</head>
+<script src="js/msg.js"></script>
+<body>
+    <style>
+        body{
+            background-color: rgb(43, 43, 43);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px;
+            flex-flow:row wrap;
+        }
+    </style>
+
+<WinUI-Grid style="width: 70%;height: auto;margin-top: 30px;">
+    <WinUI-H1 style="margin: auto;">Type some text. (All Language)</WinUI-H1><br>
+    <WinUI-TextBox contenteditable="true" id="Bot_Token" style="margin: auto;"></WinUI-TextBox><br>
+    <WinUI-Button onclick="connectBot()" style="width: 170px;margin: auto;">Connect Telegram Bot</WinUI-Button>
+</WinUI-Grid>
+
+<WinUI-Grid style="width: 70%;height: auto;margin-top: 30px;">
+    <WinUI-H1 style="margin: auto;">Send Message to User or Chat.</WinUI-H1>
+    <WinUI-TextBox contenteditable="true" id="Send_Message_ID" style="margin: auto;width: 130px;"></WinUI-TextBox><br>
+    <WinUI-TextBox contenteditable="true" id="Send_Message_Text" style="margin: auto;">Text</WinUI-TextBox><br>
+    <WinUI-Button onclick="sendMessage(getElementById('Send_Message_ID').innerText,getElementById('Send_Message_Text').innerText);getElementById('Send_Message_Text').innerText='';" style="width: 116px;margin: auto;">Send message</WinUI-Button>
+</WinUI-Grid>
+<br>
+<WinUI-TextBox id="code" class="codeeditor" contenteditable="true">
+    &nbsp;function Main(chatId,userId,messageId,messageText,chatName,userName)
+    <br>&nbsp;{
+        <br>&nbsp;var result = "MESSAGENULL";
+        <br>
+        <br>&nbsp;if(messageText == "/help"){
+            <br>&nbsp;&nbsp;result = "帮助菜单\n1.帮助1\n2.帮助2\n3.帮助3";
+            <br>&nbsp;}
+            <br>&nbsp;result = "您输入了" + messageText;
+            <br>&nbsp;return result;
+            <br>&nbsp;}
+</WinUI-TextBox>
+<WinUI-Grid style="width: 70%;height: auto;margin-top: 30px;">
+    <WinUI-H1 style="margin: auto;">Output</WinUI-H1>
+    <div id="message" style="margin-top: 10px;" class="messagebox"></div>
+</WinUI-Grid>
+    <script src="js/dark.js"></script>
+    <script src="js/bot.js"></script>
+    <script>
+document.addEventListener("keydown", function(event) {
+  if (event.ctrlKey && event.key === "s") {
+    event.preventDefault();
+    runjs();
+  }
+});
+
+    </script>
+</body>
+</html>
+<script>
+    function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+const tokenTextBox = document.getElementById('Bot_Token');
+
+    const tokenFromURL = getParameterByName('t');
+    if (tokenFromURL && tokenFromURL.length > 20) {
+        tokenTextBox.innerText = tokenFromURL;
+    }
+
+document.getElementById("Send_Message_ID").innerText = getParameterByName('smu');
+document.getElementById("Send_Message_Text").innerText = getParameterByName('smt');
+WinUINotify("成功加载Token<br>"+tokenFromURL,"检测到Token",5000);
+</script>
