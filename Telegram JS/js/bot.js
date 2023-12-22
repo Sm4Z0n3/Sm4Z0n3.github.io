@@ -1,5 +1,4 @@
 var apiUrl = `https://api.telegram.org/bot`;
-//6662950137:AAH2w1Fe58rEo3jtOYa_gPz4uZbf9mruYu0
 // 连接Telegram Bot
 async function connectBot() {
     try {
